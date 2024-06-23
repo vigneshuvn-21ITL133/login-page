@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <img src="./image/v.jpg" alt="Avatar" style="width:150px">
+    <h2>LOGIN</h2>
+    <center><label>Username</label>
+    <input type="text" id="username" name="username"><br>
+    <label>Password</label>
+    <input type="password" id="password" name="password"">
+    <button type="submit" onclick="login()">Login</button></center>
+    <br>
+    <div class="split">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO2W60tTYRzHn3N2Ob3QXpQIJhhoWmameckUTcvUtNSprELUhIaS0kyxber0TEMrNHOh5i0sQsnLmms3S+y49GUXFfEf8HUEQs1K+8UZGV7O5s7cCKIvfN/snGefz/k9D5yD0P84ECD5AVCGF0A5poBKnAQZR0j/5lqojHMOivFpSMdWIA4BY7Owr5Z7JNwY54HlvCAoxBfhtBUoUxMQgAif2/VUQIyXQQq2Zjd4a9OwVZDyRI7By7E2y5PE7bKXsc9AIpwdvJJ73SlwIbYM1cibHbyBHwjJyPrYszAziPERqOVcABJ5AIk8QcrJhFJcBYINB9QROB0Q4fOM4DMIQMwZBBJxkZXQ1ywi9NgdglPEIdDyv0Mhvhl+FgFIuDdZ/yFrARNRDyYCgCIAGrgA8b8FxJxBl8PpwBQxaxFY7zMeQAG+DMOIg1wdoNw8NsHXO8Uvs7Uu517/EpvmNnctNreXHNwuMM0LYRR4yz9qS8BLMg9sW98tE24XmOKnMgpQyM3ZAlXtNXKGLSDOMwrMIHdnC0g7a+V/dQuqOuVXtgtMuO9nElh6s6/aloCtAxelMH7bCj8gnQOyp4L5LQkm4uM6eNW0Bx4bQ6DoZZL5XXc4D7EMSZHcGIVuZatAtEJvtroITISChn+i9oJMGw8X1QJL7+tPDrEVuKG8O8o0/vyWjhnrApOE39yE1498TeofON0sdQZ0G0Ir7YVXd8qlPtL32+Deklmo774Vb3NxnTZ2YSN8o8QDQ8SQre2gqHhuizZ26JRC95Pp6bPv9C/uaD88GXw4dyxtjUmCbrEmydxqiFQ9NQZnql75eg5QAR59r4MzWvSRI6KxpBX6HuHoJUhser4JHlgzvSbpaQiya4RdhrAigTqDUcDeClTZIGx9aIH7yD5AhfJ2KWKTDsOJlt1KpL/IgquPFGtiZaMSORKlPqw0byzV6nbs1EJNymqvPtyxj9L19I+HH6nVxS5kqjPtBtMHtl4XMzugDfVHzkqvMSShUR9luqZJNqczjVstgBJN4pcmXdTUgPFYNHJlBib8fdt0EXntujCywxBa1zd+POeJIcjPpVD0r+YXKOMAnG5a4XYAAAAASUVORK5CYII=">
+
+        <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiM1OWE0ZjkiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoNCw0KSI+PHBhdGggZD0iTTMyLDZjLTE0LjM1OSwwIC0yNiwxMS42NDEgLTI2LDI2YzAsMTIuMjc3IDguNTEyLDIyLjU2IDE5Ljk1NSwyNS4yODZjLTAuNTkyLC0wLjE0MSAtMS4xNzksLTAuMjk5IC0xLjc1NSwtMC40Nzl2LTUuOTU3YzAsMCAtMC45NzUsMC4zMjUgLTIuMjc1LDAuMzI1Yy0zLjYzNywwIC01LjE0OCwtMy4yNDUgLTUuNTI1LC00Ljg3NWMtMC4yMjksLTAuOTkzIC0wLjgyNywtMS45MzQgLTEuNDY5LC0yLjUwOWMtMC43NjcsLTAuNjg0IC0xLjEyNiwtMC42ODYgLTEuMTMxLC0wLjkyYy0wLjAxLC0wLjQ5MSAwLjY1OCwtMC40NzEgMC45NzUsLTAuNDcxYzEuNjI1LDAgMi44NTcsMS43MjkgMy40MjksMi42MjNjMS40MTcsMi4yMDcgMi45MzgsMi41NzcgMy43MjEsMi41NzdjMC45NzUsMCAxLjgxNywtMC4xNDYgMi4zOTcsLTAuNDI2YzAuMjY4LC0xLjg4OCAxLjEwOCwtMy41NyAyLjQ3OCwtNC43NzRjLTYuMDk3LC0xLjIxOSAtMTAuNCwtNC43MTYgLTEwLjQsLTEwLjRjMCwtMi45MjggMS4xNzUsLTUuNjE5IDMuMTMzLC03Ljc5MmMtMC4yLC0wLjU2NyAtMC41MzMsLTEuNzE0IC0wLjUzMywtMy41ODNjMCwtMS4yMzUgMC4wODYsLTIuNzUxIDAuNjUsLTQuMjI1YzAsMCAzLjcwOCwwLjAyNiA3LjIwNSwzLjMzOGMxLjYxNCwtMC40NyAzLjM0MSwtMC43MzggNS4xNDUsLTAuNzM4YzEuODA0LDAgMy41MzEsMC4yNjggNS4xNDUsMC43MzhjMy40OTcsLTMuMzEyIDcuMjA1LC0zLjMzOCA3LjIwNSwtMy4zMzhjMC41NjcsMS40NzQgMC42NSwyLjk5IDAuNjUsNC4yMjVjMCwyLjAxNSAtMC4yNjgsMy4xOSAtMC40MzIsMy42OTdjMS44OTgsMi4xNTMgMy4wMzIsNC44MDIgMy4wMzIsNy42NzhjMCw1LjY4NCAtNC4zMDMsOS4xODEgLTEwLjQsMTAuNGMxLjYyOCwxLjQzIDIuNiwzLjUxMyAyLjYsNS44NXY4LjU1N2MtMC41NzYsMC4xODEgLTEuMTYyLDAuMzM4IC0xLjc1NSwwLjQ3OWMxMS40NDMsLTIuNzI2IDE5Ljk1NSwtMTMuMDA5IDE5Ljk1NSwtMjUuMjg2YzAsLTE0LjM1OSAtMTEuNjQxLC0yNiAtMjYsLTI2ek0zMy44MTMsNTcuOTNjLTAuNTk5LDAuMDQyIC0xLjIwMywwLjA3IC0xLjgxMywwLjA3YzAuNjEsMCAxLjIxMywtMC4wMjkgMS44MTMsLTAuMDd6TTM3Ljc4Niw1Ny4zNDZjLTEuMTY0LDAuMjY1IC0yLjM1NywwLjQ1MSAtMy41NzUsMC41NTRjMS4yMTgsLTAuMTAzIDIuNDExLC0wLjI5IDMuNTc1LC0wLjU1NHpNMzIsNThjLTAuNjEsMCAtMS4yMTQsLTAuMDI4IC0xLjgxMywtMC4wN2MwLjYsMC4wNDEgMS4yMDMsMC4wNyAxLjgxMywwLjA3ek0yOS43ODgsNTcuOWMtMS4yMTcsLTAuMTAzIC0yLjQxMSwtMC4yODkgLTMuNTc0LC0wLjU1NGMxLjE2NCwwLjI2NCAyLjM1NywwLjQ1MSAzLjU3NCwwLjU1NHoiPjwvcGF0aD48L2c+PC9nPgo8L3N2Zz4="/>
+    </div>
+    <script src="script.js"></script>
+    </div>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body{
+            background-color: rgb(0, 0, 0);
+            
+            
+        }
+        
+    .split{
+                grid-template-columns: 1fr 1fr  ;
+                display: grid;
+                align-items: center;
+                margin: 25px 0;
+                cursor: pointer;
+    }
+        
+        img{
+            border-radius: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        h2{
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+        .container{
+            width: 400px;
+            margin: 200px auto;
+            color: white;
+            border-style:ridge;
+            border-color: aliceblue;
+            backdrop-filter: blur(10%);
+            
+        }
+        input{
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 30px;
+        }
+        input:hover{
+            border-color: #3e9ce8;
+            box-shadow: 5, 30, 70px #018dff;
+        }
+        button{
+            width: 50%;
+            padding: 10px;
+            background-color: #3e9ce8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: medium;
+            align-content: center;
+            font-weight: bold;
+
+        }
+        button:hover{
+            background-color: #2d1eff;
+        }
+        label{
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+           
+        }
+    </style>
+    </style>
+<footer>
+    <copyright>&copy; 2024 Vigneshu V N</copyright>
+</footer> 
+</body>
+</html>
